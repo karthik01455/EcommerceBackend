@@ -17,6 +17,7 @@ async function getProducts(req,res){
         res.status(200).send(products);
     }
     catch(err){
+        
         res.status(400).send(err);
     }
 }

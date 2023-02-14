@@ -27,7 +27,7 @@ async function addCartProduct(productId,count)
     try{
         const value={
            
-            id:productId,
+            productId:productId,
             count:count,
             userName:'sai'
         }
