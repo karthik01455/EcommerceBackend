@@ -8,12 +8,13 @@ module.exports = {
         type: Sequelize.STRING,
         primaryKey:true
       },
-      id: {
+      productId: {
         type: Sequelize.INTEGER,
         primarykey:true,
+        foreignKey: true,
         references: {
           model: 'Products',
-          key: 'id'
+          key: 'id',
         }
       },
       count: {

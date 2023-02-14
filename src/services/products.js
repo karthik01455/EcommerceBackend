@@ -9,6 +9,7 @@ async function addProducts(productName, price) {
         return product;
     }
     catch(err){
+        console.log(err);
         throw err;
     }
 }

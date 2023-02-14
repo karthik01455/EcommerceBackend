@@ -12,13 +12,20 @@ module.exports = (sequelize, DataTypes) => {
     
     static associate(models) {
       // define association here
-      this.belongsTo(models.Products, {foreignKey: 'id',  onDelete:'CASCADE'});
+      this.belongsTo(models.Products, {foreignKey: 'productId',  onDelete:'CASCADE', targetKey: 'id'});
     }
   }
   Carts.init({
     userName: DataTypes.STRING,
-    count: DataTypes.INTEGER
-  }, {
+    count: DataTypes.INTEGER,
+    productId: {
+      type: DataTypes.INTEGER,
+      field: 'productId',
+      references: {
+        model: Model.Products,
+        key: 'id'
+    }
+ } }, {
     sequelize,
     modelName: 'Carts',
   });
