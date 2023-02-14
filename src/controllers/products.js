@@ -23,7 +23,7 @@ async function getProducts(req,res){
 async function addCartProduct(req,res)
 {console.log('controller cart')
     try{
-        const cart= await productServices.addCartProduct(req.body.productId,req.userName.userName,req.body.count);
+        const cart= await productServices.addCartProduct(req.body.productId,req.body.count);
         res.status(201).send(cart);
     }
     catch(err){

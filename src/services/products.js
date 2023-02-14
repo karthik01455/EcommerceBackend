@@ -22,14 +22,14 @@ async function getProducts(){
         throw err;
     }
 }
-async function addCartProduct(productId,userName,count)
+async function addCartProduct(productId,count)
 {
     try{
         const value={
            
-            id:1,
-            userName:"a",
-            count:1
+            id:productId,
+            count:count,
+            userName:'sai'
         }
         console.log(value);
         const cart = await Carts.create(value);
