@@ -1,3 +1,5 @@
+const redis = require('redis');
+const client = redis.createClient();
 const {Products,Carts} = require('../../database/models');
 
 async function addProducts(productName, price) {
